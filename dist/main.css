@@ -1,6 +1,6 @@
 /*!***********************************************************************************************************************************************************!*\
   !*** css ../../node_modules/css-loader/dist/cjs.js!../../node_modules/postcss-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./style.scss ***!
   \***********************************************************************************************************************************************************/
-:after{color:red}
+*{box-sizing:border-box;margin:0;padding:0}header{align-items:center;background-color:#000;color:#fff;display:flex;font-family:Smooch Sans,sans-serif;height:80px;justify-content:space-between;padding:0 2rem;width:100%}header .logo{font-size:36px}header nav .links{align-items:center;display:flex;font-size:20px;gap:4rem;justify-content:center;list-style:none}header button,header nav .links__link{cursor:pointer}header button{background-color:#fff;border:none;border-radius:10px;color:#000;font-family:Smooch Sans,sans-serif;font-size:20px;height:45px;outline:none;width:163px}
 
 /*# sourceMappingURL=main.css.map*/

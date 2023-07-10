@@ -1,3 +1,68 @@
-::after {
-    color: red;
+//sizes
+$max-width: 1440px;
+
+//colors
+$primary-background-color: #fff;
+$secondary-background-color: #000;
+
+//fonts
+$lato: 'Lato', sans-serif;
+$smooch_sans: 'Smooch Sans', sans-serif;
+
+//global style
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+//mixin styles
+@mixin button {
+    outline: none;
+    width: 163px;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    font-family: $smooch_sans;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+//main styles
+header {
+    width: 100%;
+    height: 80px;
+    background-color: $secondary-background-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-family: $smooch_sans;
+    padding: 0 2rem;
+
+    .logo {
+        font-size: 36px;
+    }
+
+    nav {
+
+        .links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+            list-style: none;
+            font-size: 20px;
+
+            &__link {
+                cursor: pointer;
+            }
+        }
+    }
+
+    button {
+        background-color: #fff;
+        color: #000;
+        @include button;
+    }
 }
