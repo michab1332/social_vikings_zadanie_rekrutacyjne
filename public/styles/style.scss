@@ -1,5 +1,6 @@
 //sizes
 $max-width: 1440px;
+$mobile-width: 680px;
 
 //colors
 $primary-background-color: #fff;
@@ -29,7 +30,7 @@ $smooch_sans: 'Smooch Sans', sans-serif;
 }
 
 //main styles
-header {
+.header {
     width: 100%;
     height: 80px;
     background-color: $secondary-background-color;
@@ -40,29 +41,42 @@ header {
     font-family: $smooch_sans;
     padding: 0 2rem;
 
-    .logo {
+    &__logo {
         font-size: 36px;
     }
 
-    nav {
+    &__links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        list-style: none;
+        font-size: 20px;
 
-        .links {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 4rem;
-            list-style: none;
-            font-size: 20px;
+        @media only screen and (max-width: $mobile-width) {
+            display: none;
+        }
 
-            &__link {
-                cursor: pointer;
-            }
+        &__link {
+            cursor: pointer;
         }
     }
 
-    button {
+    &__button {
         background-color: #fff;
         color: #000;
         @include button;
+
+        @media only screen and (max-width: $mobile-width) {
+            display: none;
+        }
+    }
+
+    &__burger {
+        cursor: pointer;
+
+        @media only screen and (min-width: $mobile-width) {
+            display: none;
+        }
     }
 }
