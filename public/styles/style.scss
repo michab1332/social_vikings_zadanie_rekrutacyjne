@@ -86,12 +86,12 @@ main {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    min-height: 90vh;
+    min-height: 120vh;
+    gap: 7rem;
 }
 
 .section {
     display: flex;
-
     align-items: center;
     width: 1151px;
     height: 404px;
@@ -101,6 +101,7 @@ main {
         flex-direction: column-reverse;
         width: 100%;
         padding: 0 1rem;
+        height: fit-content;
     }
 
     &__content {
@@ -129,7 +130,50 @@ main {
         height: 404px;
 
         @media only screen and (max-width: $mobile-width) {
-            width: 100%;
+            width: 388px;
+            height: 272px;
+            margin-top: 2rem;
+            padding: 0 1rem;
+        }
+    }
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    @media only screen and (max-width: $mobile-width) {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    &__card {
+        background-color: #e0e0e0;
+        width: 300px;
+        height: 420px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        &__title {
+            font-size: 36px;
+            font-family: $smooch_sans;
+        }
+
+        &__description {
+            width: 80%;
+            text-align: center;
+            font-family: $lato;
+        }
+
+        &__button {
+            background-color: #000;
+            color: #fff;
+            @include button;
         }
     }
 }
@@ -143,4 +187,5 @@ footer {
     font-family: $smooch_sans;
     font-size: 16px;
     font-weight: 500;
+    margin-top: 2rem;
 }
